@@ -1,0 +1,13 @@
+C:\Users\User\OneDrive\Desktop\IdleUniverseProject\IdleUniverse\IdleUniverse\obj\Debug\IdleUniverse.csprojAssemblyReference.cache
+C:\Users\User\OneDrive\Desktop\IdleUniverseProject\IdleUniverse\IdleUniverse\obj\Debug\IdleUniverse.FIrstTab.resources
+C:\Users\User\OneDrive\Desktop\IdleUniverseProject\IdleUniverse\IdleUniverse\obj\Debug\IdleUniverse.Properties.Resources.resources
+C:\Users\User\OneDrive\Desktop\IdleUniverseProject\IdleUniverse\IdleUniverse\obj\Debug\IdleUniverse.csproj.GenerateResource.cache
+C:\Users\User\OneDrive\Desktop\IdleUniverseProject\IdleUniverse\IdleUniverse\obj\Debug\IdleUniverse.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Desktop\IdleUniverseProject\IdleUniverse\IdleUniverse\bin\Debug\IdleUniverse.exe.config
+C:\Users\User\OneDrive\Desktop\IdleUniverseProject\IdleUniverse\IdleUniverse\bin\Debug\IdleUniverse.exe
+C:\Users\User\OneDrive\Desktop\IdleUniverseProject\IdleUniverse\IdleUniverse\bin\Debug\IdleUniverse.pdb
+C:\Users\User\OneDrive\Desktop\IdleUniverseProject\IdleUniverse\IdleUniverse\obj\Debug\IdleUniverse.NanoForm.resources
+C:\Users\User\OneDrive\Desktop\IdleUniverseProject\IdleUniverse\IdleUniverse\obj\Debug\IdleUniverse.QuantiumForm.resources
+C:\Users\User\OneDrive\Desktop\IdleUniverseProject\IdleUniverse\IdleUniverse\obj\Debug\IdleUniverse.exe
+C:\Users\User\OneDrive\Desktop\IdleUniverseProject\IdleUniverse\IdleUniverse\obj\Debug\IdleUniverse.pdb
+C:\Users\User\OneDrive\Desktop\IdleUniverseProject\IdleUniverse\IdleUniverse\obj\Debug\IdleUniverse.QuantiumDetailsForm.resources
