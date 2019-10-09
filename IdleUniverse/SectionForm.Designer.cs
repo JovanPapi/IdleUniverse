@@ -39,33 +39,42 @@
             this.pbGoBackToFirstTab = new System.Windows.Forms.PictureBox();
             this.pbAtomicEnergyPictureNumber = new System.Windows.Forms.PictureBox();
             this.lblProton = new System.Windows.Forms.Label();
-            this.lblProtonProduceEnergy = new System.Windows.Forms.Label();
+            this.lbl9 = new System.Windows.Forms.Label();
             this.Panel9 = new System.Windows.Forms.Panel();
             this.lblNeutron = new System.Windows.Forms.Label();
-            this.lblNeutronProduceEnergy = new System.Windows.Forms.Label();
+            this.lbl8 = new System.Windows.Forms.Label();
             this.Panel8 = new System.Windows.Forms.Panel();
             this.lblElectron = new System.Windows.Forms.Label();
-            this.lblElectronProduceEnergy = new System.Windows.Forms.Label();
+            this.lbl7 = new System.Windows.Forms.Label();
             this.Panel7 = new System.Windows.Forms.Panel();
             this.lbQuark = new System.Windows.Forms.Label();
-            this.lblQuarkProduceEnergy = new System.Windows.Forms.Label();
+            this.lbl6 = new System.Windows.Forms.Label();
             this.lblQuarks = new System.Windows.Forms.Label();
             this.Panel6 = new System.Windows.Forms.Panel();
             this.lblPhoton = new System.Windows.Forms.Label();
-            this.lblPhotonProduceEnergy = new System.Windows.Forms.Label();
+            this.lbl5 = new System.Windows.Forms.Label();
             this.Panel5 = new System.Windows.Forms.Panel();
             this.lblHiggsBoson = new System.Windows.Forms.Label();
-            this.lblHiggsBosonProduceEnergy = new System.Windows.Forms.Label();
+            this.lbl4 = new System.Windows.Forms.Label();
             this.Panel4 = new System.Windows.Forms.Panel();
             this.lblNeutrino = new System.Windows.Forms.Label();
-            this.lblNeutrinoProduceEnergy = new System.Windows.Forms.Label();
+            this.lbl3 = new System.Windows.Forms.Label();
             this.Panel3 = new System.Windows.Forms.Panel();
             this.lblQuantiumFoam = new System.Windows.Forms.Label();
-            this.lblQuantiumFoamProduceEnergy = new System.Windows.Forms.Label();
+            this.lbl2 = new System.Windows.Forms.Label();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.lblString = new System.Windows.Forms.Label();
-            this.lblStringProduceEnergy = new System.Windows.Forms.Label();
+            this.lbl1 = new System.Windows.Forms.Label();
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbl10 = new System.Windows.Forms.Label();
+            this.Panel10 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbl12 = new System.Windows.Forms.Label();
+            this.Panel12 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbl11 = new System.Windows.Forms.Label();
+            this.Panel11 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbGoBackToFirstTab)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAtomicEnergyPictureNumber)).BeginInit();
             this.Panel9.SuspendLayout();
@@ -77,6 +86,9 @@
             this.Panel3.SuspendLayout();
             this.Panel2.SuspendLayout();
             this.Panel1.SuspendLayout();
+            this.Panel10.SuspendLayout();
+            this.Panel12.SuspendLayout();
+            this.Panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // rbQuick
@@ -184,24 +196,24 @@
             this.lblProton.Size = new System.Drawing.Size(0, 13);
             this.lblProton.TabIndex = 0;
             // 
-            // lblProtonProduceEnergy
+            // lbl9
             // 
-            this.lblProtonProduceEnergy.AutoSize = true;
-            this.lblProtonProduceEnergy.Location = new System.Drawing.Point(65, 135);
-            this.lblProtonProduceEnergy.Name = "lblProtonProduceEnergy";
-            this.lblProtonProduceEnergy.Size = new System.Drawing.Size(35, 13);
-            this.lblProtonProduceEnergy.TabIndex = 9;
-            this.lblProtonProduceEnergy.Text = "label9";
+            this.lbl9.AutoSize = true;
+            this.lbl9.Location = new System.Drawing.Point(65, 135);
+            this.lbl9.Name = "lbl9";
+            this.lbl9.Size = new System.Drawing.Size(35, 13);
+            this.lbl9.TabIndex = 9;
+            this.lbl9.Text = "label9";
             // 
             // Panel9
             // 
-            this.Panel9.Controls.Add(this.lblProtonProduceEnergy);
+            this.Panel9.Controls.Add(this.lbl9);
             this.Panel9.Controls.Add(this.lblProton);
             this.Panel9.Location = new System.Drawing.Point(359, 443);
             this.Panel9.Name = "Panel9";
             this.Panel9.Size = new System.Drawing.Size(170, 170);
             this.Panel9.TabIndex = 17;
-            this.Panel9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedPanel);
+            this.Panel9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedMaterialPanel);
             // 
             // lblNeutron
             // 
@@ -211,24 +223,24 @@
             this.lblNeutron.Size = new System.Drawing.Size(0, 13);
             this.lblNeutron.TabIndex = 0;
             // 
-            // lblNeutronProduceEnergy
+            // lbl8
             // 
-            this.lblNeutronProduceEnergy.AutoSize = true;
-            this.lblNeutronProduceEnergy.Location = new System.Drawing.Point(63, 135);
-            this.lblNeutronProduceEnergy.Name = "lblNeutronProduceEnergy";
-            this.lblNeutronProduceEnergy.Size = new System.Drawing.Size(35, 13);
-            this.lblNeutronProduceEnergy.TabIndex = 8;
-            this.lblNeutronProduceEnergy.Text = "label8";
+            this.lbl8.AutoSize = true;
+            this.lbl8.Location = new System.Drawing.Point(63, 135);
+            this.lbl8.Name = "lbl8";
+            this.lbl8.Size = new System.Drawing.Size(35, 13);
+            this.lbl8.TabIndex = 8;
+            this.lbl8.Text = "label8";
             // 
             // Panel8
             // 
-            this.Panel8.Controls.Add(this.lblNeutronProduceEnergy);
+            this.Panel8.Controls.Add(this.lbl8);
             this.Panel8.Controls.Add(this.lblNeutron);
             this.Panel8.Location = new System.Drawing.Point(183, 443);
             this.Panel8.Name = "Panel8";
             this.Panel8.Size = new System.Drawing.Size(170, 170);
             this.Panel8.TabIndex = 17;
-            this.Panel8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedPanel);
+            this.Panel8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedMaterialPanel);
             // 
             // lblElectron
             // 
@@ -238,24 +250,24 @@
             this.lblElectron.Size = new System.Drawing.Size(0, 13);
             this.lblElectron.TabIndex = 0;
             // 
-            // lblElectronProduceEnergy
+            // lbl7
             // 
-            this.lblElectronProduceEnergy.AutoSize = true;
-            this.lblElectronProduceEnergy.Location = new System.Drawing.Point(67, 135);
-            this.lblElectronProduceEnergy.Name = "lblElectronProduceEnergy";
-            this.lblElectronProduceEnergy.Size = new System.Drawing.Size(35, 13);
-            this.lblElectronProduceEnergy.TabIndex = 7;
-            this.lblElectronProduceEnergy.Text = "label7";
+            this.lbl7.AutoSize = true;
+            this.lbl7.Location = new System.Drawing.Point(67, 135);
+            this.lbl7.Name = "lbl7";
+            this.lbl7.Size = new System.Drawing.Size(35, 13);
+            this.lbl7.TabIndex = 7;
+            this.lbl7.Text = "label7";
             // 
             // Panel7
             // 
-            this.Panel7.Controls.Add(this.lblElectronProduceEnergy);
+            this.Panel7.Controls.Add(this.lbl7);
             this.Panel7.Controls.Add(this.lblElectron);
             this.Panel7.Location = new System.Drawing.Point(7, 443);
             this.Panel7.Name = "Panel7";
             this.Panel7.Size = new System.Drawing.Size(170, 170);
             this.Panel7.TabIndex = 16;
-            this.Panel7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedPanel);
+            this.Panel7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedMaterialPanel);
             // 
             // lbQuark
             // 
@@ -265,14 +277,14 @@
             this.lbQuark.Size = new System.Drawing.Size(0, 13);
             this.lbQuark.TabIndex = 0;
             // 
-            // lblQuarkProduceEnergy
+            // lbl6
             // 
-            this.lblQuarkProduceEnergy.AutoSize = true;
-            this.lblQuarkProduceEnergy.Location = new System.Drawing.Point(65, 135);
-            this.lblQuarkProduceEnergy.Name = "lblQuarkProduceEnergy";
-            this.lblQuarkProduceEnergy.Size = new System.Drawing.Size(35, 13);
-            this.lblQuarkProduceEnergy.TabIndex = 6;
-            this.lblQuarkProduceEnergy.Text = "label6";
+            this.lbl6.AutoSize = true;
+            this.lbl6.Location = new System.Drawing.Point(65, 135);
+            this.lbl6.Name = "lbl6";
+            this.lbl6.Size = new System.Drawing.Size(35, 13);
+            this.lbl6.TabIndex = 6;
+            this.lbl6.Text = "label6";
             // 
             // lblQuarks
             // 
@@ -285,13 +297,13 @@
             // Panel6
             // 
             this.Panel6.Controls.Add(this.lblQuarks);
-            this.Panel6.Controls.Add(this.lblQuarkProduceEnergy);
+            this.Panel6.Controls.Add(this.lbl6);
             this.Panel6.Controls.Add(this.lbQuark);
             this.Panel6.Location = new System.Drawing.Point(359, 267);
             this.Panel6.Name = "Panel6";
             this.Panel6.Size = new System.Drawing.Size(170, 170);
             this.Panel6.TabIndex = 16;
-            this.Panel6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedPanel);
+            this.Panel6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedMaterialPanel);
             // 
             // lblPhoton
             // 
@@ -301,24 +313,24 @@
             this.lblPhoton.Size = new System.Drawing.Size(0, 13);
             this.lblPhoton.TabIndex = 0;
             // 
-            // lblPhotonProduceEnergy
+            // lbl5
             // 
-            this.lblPhotonProduceEnergy.AutoSize = true;
-            this.lblPhotonProduceEnergy.Location = new System.Drawing.Point(63, 135);
-            this.lblPhotonProduceEnergy.Name = "lblPhotonProduceEnergy";
-            this.lblPhotonProduceEnergy.Size = new System.Drawing.Size(35, 13);
-            this.lblPhotonProduceEnergy.TabIndex = 5;
-            this.lblPhotonProduceEnergy.Text = "label5";
+            this.lbl5.AutoSize = true;
+            this.lbl5.Location = new System.Drawing.Point(63, 135);
+            this.lbl5.Name = "lbl5";
+            this.lbl5.Size = new System.Drawing.Size(35, 13);
+            this.lbl5.TabIndex = 5;
+            this.lbl5.Text = "label5";
             // 
             // Panel5
             // 
-            this.Panel5.Controls.Add(this.lblPhotonProduceEnergy);
+            this.Panel5.Controls.Add(this.lbl5);
             this.Panel5.Controls.Add(this.lblPhoton);
             this.Panel5.Location = new System.Drawing.Point(183, 267);
             this.Panel5.Name = "Panel5";
             this.Panel5.Size = new System.Drawing.Size(170, 170);
             this.Panel5.TabIndex = 15;
-            this.Panel5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedPanel);
+            this.Panel5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedMaterialPanel);
             // 
             // lblHiggsBoson
             // 
@@ -328,24 +340,24 @@
             this.lblHiggsBoson.Size = new System.Drawing.Size(0, 13);
             this.lblHiggsBoson.TabIndex = 0;
             // 
-            // lblHiggsBosonProduceEnergy
+            // lbl4
             // 
-            this.lblHiggsBosonProduceEnergy.AutoSize = true;
-            this.lblHiggsBosonProduceEnergy.Location = new System.Drawing.Point(67, 135);
-            this.lblHiggsBosonProduceEnergy.Name = "lblHiggsBosonProduceEnergy";
-            this.lblHiggsBosonProduceEnergy.Size = new System.Drawing.Size(35, 13);
-            this.lblHiggsBosonProduceEnergy.TabIndex = 4;
-            this.lblHiggsBosonProduceEnergy.Text = "label4";
+            this.lbl4.AutoSize = true;
+            this.lbl4.Location = new System.Drawing.Point(67, 135);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(35, 13);
+            this.lbl4.TabIndex = 4;
+            this.lbl4.Text = "label4";
             // 
             // Panel4
             // 
-            this.Panel4.Controls.Add(this.lblHiggsBosonProduceEnergy);
+            this.Panel4.Controls.Add(this.lbl4);
             this.Panel4.Controls.Add(this.lblHiggsBoson);
             this.Panel4.Location = new System.Drawing.Point(7, 267);
             this.Panel4.Name = "Panel4";
             this.Panel4.Size = new System.Drawing.Size(170, 170);
             this.Panel4.TabIndex = 15;
-            this.Panel4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedPanel);
+            this.Panel4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedMaterialPanel);
             // 
             // lblNeutrino
             // 
@@ -355,24 +367,24 @@
             this.lblNeutrino.Size = new System.Drawing.Size(0, 13);
             this.lblNeutrino.TabIndex = 0;
             // 
-            // lblNeutrinoProduceEnergy
+            // lbl3
             // 
-            this.lblNeutrinoProduceEnergy.AutoSize = true;
-            this.lblNeutrinoProduceEnergy.Location = new System.Drawing.Point(65, 136);
-            this.lblNeutrinoProduceEnergy.Name = "lblNeutrinoProduceEnergy";
-            this.lblNeutrinoProduceEnergy.Size = new System.Drawing.Size(35, 13);
-            this.lblNeutrinoProduceEnergy.TabIndex = 3;
-            this.lblNeutrinoProduceEnergy.Text = "label3";
+            this.lbl3.AutoSize = true;
+            this.lbl3.Location = new System.Drawing.Point(65, 136);
+            this.lbl3.Name = "lbl3";
+            this.lbl3.Size = new System.Drawing.Size(35, 13);
+            this.lbl3.TabIndex = 3;
+            this.lbl3.Text = "label3";
             // 
             // Panel3
             // 
-            this.Panel3.Controls.Add(this.lblNeutrinoProduceEnergy);
+            this.Panel3.Controls.Add(this.lbl3);
             this.Panel3.Controls.Add(this.lblNeutrino);
             this.Panel3.Location = new System.Drawing.Point(359, 91);
             this.Panel3.Name = "Panel3";
             this.Panel3.Size = new System.Drawing.Size(170, 170);
             this.Panel3.TabIndex = 15;
-            this.Panel3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedPanel);
+            this.Panel3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedMaterialPanel);
             // 
             // lblQuantiumFoam
             // 
@@ -382,24 +394,24 @@
             this.lblQuantiumFoam.Size = new System.Drawing.Size(0, 13);
             this.lblQuantiumFoam.TabIndex = 0;
             // 
-            // lblQuantiumFoamProduceEnergy
+            // lbl2
             // 
-            this.lblQuantiumFoamProduceEnergy.AutoSize = true;
-            this.lblQuantiumFoamProduceEnergy.Location = new System.Drawing.Point(63, 136);
-            this.lblQuantiumFoamProduceEnergy.Name = "lblQuantiumFoamProduceEnergy";
-            this.lblQuantiumFoamProduceEnergy.Size = new System.Drawing.Size(35, 13);
-            this.lblQuantiumFoamProduceEnergy.TabIndex = 2;
-            this.lblQuantiumFoamProduceEnergy.Text = "label2";
+            this.lbl2.AutoSize = true;
+            this.lbl2.Location = new System.Drawing.Point(63, 136);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(35, 13);
+            this.lbl2.TabIndex = 2;
+            this.lbl2.Text = "label2";
             // 
             // Panel2
             // 
-            this.Panel2.Controls.Add(this.lblQuantiumFoamProduceEnergy);
+            this.Panel2.Controls.Add(this.lbl2);
             this.Panel2.Controls.Add(this.lblQuantiumFoam);
             this.Panel2.Location = new System.Drawing.Point(183, 91);
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(170, 170);
             this.Panel2.TabIndex = 15;
-            this.Panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedPanel);
+            this.Panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedMaterialPanel);
             // 
             // lblString
             // 
@@ -409,30 +421,115 @@
             this.lblString.Size = new System.Drawing.Size(0, 13);
             this.lblString.TabIndex = 0;
             // 
-            // lblStringProduceEnergy
+            // lbl1
             // 
-            this.lblStringProduceEnergy.AutoSize = true;
-            this.lblStringProduceEnergy.Location = new System.Drawing.Point(67, 136);
-            this.lblStringProduceEnergy.Name = "lblStringProduceEnergy";
-            this.lblStringProduceEnergy.Size = new System.Drawing.Size(35, 13);
-            this.lblStringProduceEnergy.TabIndex = 1;
-            this.lblStringProduceEnergy.Text = "label1";
+            this.lbl1.AutoSize = true;
+            this.lbl1.Location = new System.Drawing.Point(67, 136);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(35, 13);
+            this.lbl1.TabIndex = 1;
+            this.lbl1.Text = "label1";
             // 
             // Panel1
             // 
-            this.Panel1.Controls.Add(this.lblStringProduceEnergy);
+            this.Panel1.Controls.Add(this.lbl1);
             this.Panel1.Controls.Add(this.lblString);
             this.Panel1.Location = new System.Drawing.Point(7, 91);
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(170, 170);
             this.Panel1.TabIndex = 14;
-            this.Panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedPanel);
+            this.Panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedMaterialPanel);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(28, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 0;
+            // 
+            // lbl10
+            // 
+            this.lbl10.AutoSize = true;
+            this.lbl10.Location = new System.Drawing.Point(65, 135);
+            this.lbl10.Name = "lbl10";
+            this.lbl10.Size = new System.Drawing.Size(41, 13);
+            this.lbl10.TabIndex = 9;
+            this.lbl10.Text = "label10";
+            // 
+            // Panel10
+            // 
+            this.Panel10.Controls.Add(this.lbl10);
+            this.Panel10.Controls.Add(this.label2);
+            this.Panel10.Location = new System.Drawing.Point(7, 619);
+            this.Panel10.Name = "Panel10";
+            this.Panel10.Size = new System.Drawing.Size(170, 170);
+            this.Panel10.TabIndex = 18;
+            this.Panel10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedMaterialPanel);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(28, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 13);
+            this.label6.TabIndex = 0;
+            // 
+            // lbl12
+            // 
+            this.lbl12.AutoSize = true;
+            this.lbl12.Location = new System.Drawing.Point(65, 135);
+            this.lbl12.Name = "lbl12";
+            this.lbl12.Size = new System.Drawing.Size(41, 13);
+            this.lbl12.TabIndex = 9;
+            this.lbl12.Text = "label12";
+            // 
+            // Panel12
+            // 
+            this.Panel12.AutoSize = true;
+            this.Panel12.Controls.Add(this.lbl12);
+            this.Panel12.Controls.Add(this.label6);
+            this.Panel12.Location = new System.Drawing.Point(359, 619);
+            this.Panel12.Name = "Panel12";
+            this.Panel12.Size = new System.Drawing.Size(170, 170);
+            this.Panel12.TabIndex = 18;
+            this.Panel12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedMaterialPanel);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(28, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 13);
+            this.label4.TabIndex = 0;
+            // 
+            // lbl11
+            // 
+            this.lbl11.AutoSize = true;
+            this.lbl11.Location = new System.Drawing.Point(65, 135);
+            this.lbl11.Name = "lbl11";
+            this.lbl11.Size = new System.Drawing.Size(41, 13);
+            this.lbl11.TabIndex = 9;
+            this.lbl11.Text = "label11";
+            // 
+            // Panel11
+            // 
+            this.Panel11.Controls.Add(this.lbl11);
+            this.Panel11.Controls.Add(this.label4);
+            this.Panel11.Location = new System.Drawing.Point(183, 619);
+            this.Panel11.Name = "Panel11";
+            this.Panel11.Size = new System.Drawing.Size(170, 170);
+            this.Panel11.TabIndex = 18;
+            this.Panel11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedMaterialPanel);
             // 
             // SectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 679);
+            this.ClientSize = new System.Drawing.Size(548, 617);
+            this.Controls.Add(this.Panel12);
+            this.Controls.Add(this.Panel11);
+            this.Controls.Add(this.Panel10);
             this.Controls.Add(this.pbAtomicEnergyPictureNumber);
             this.Controls.Add(this.pbGoBackToFirstTab);
             this.Controls.Add(this.Panel8);
@@ -450,6 +547,7 @@
             this.Controls.Add(this.rbX100);
             this.Controls.Add(this.rbX10);
             this.Controls.Add(this.rbX1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "SectionForm";
             this.Text = "SectionForm";
             ((System.ComponentModel.ISupportInitialize)(this.pbGoBackToFirstTab)).EndInit();
@@ -472,6 +570,12 @@
             this.Panel2.PerformLayout();
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
+            this.Panel10.ResumeLayout(false);
+            this.Panel10.PerformLayout();
+            this.Panel12.ResumeLayout(false);
+            this.Panel12.PerformLayout();
+            this.Panel11.ResumeLayout(false);
+            this.Panel11.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,32 +593,41 @@
         private System.Windows.Forms.PictureBox pbGoBackToFirstTab;
         private System.Windows.Forms.PictureBox pbAtomicEnergyPictureNumber;
         private System.Windows.Forms.Label lblProton;
-        private System.Windows.Forms.Label lblProtonProduceEnergy;
+        private System.Windows.Forms.Label lbl9;
         private System.Windows.Forms.Panel Panel9;
         private System.Windows.Forms.Label lblNeutron;
-        private System.Windows.Forms.Label lblNeutronProduceEnergy;
+        private System.Windows.Forms.Label lbl8;
         private System.Windows.Forms.Panel Panel8;
         private System.Windows.Forms.Label lblElectron;
-        private System.Windows.Forms.Label lblElectronProduceEnergy;
+        private System.Windows.Forms.Label lbl7;
         private System.Windows.Forms.Panel Panel7;
         private System.Windows.Forms.Label lbQuark;
-        private System.Windows.Forms.Label lblQuarkProduceEnergy;
+        private System.Windows.Forms.Label lbl6;
         private System.Windows.Forms.Label lblQuarks;
         private System.Windows.Forms.Panel Panel6;
         private System.Windows.Forms.Label lblPhoton;
-        private System.Windows.Forms.Label lblPhotonProduceEnergy;
+        private System.Windows.Forms.Label lbl5;
         private System.Windows.Forms.Panel Panel5;
         private System.Windows.Forms.Label lblHiggsBoson;
-        private System.Windows.Forms.Label lblHiggsBosonProduceEnergy;
+        private System.Windows.Forms.Label lbl4;
         private System.Windows.Forms.Panel Panel4;
         private System.Windows.Forms.Label lblNeutrino;
-        private System.Windows.Forms.Label lblNeutrinoProduceEnergy;
+        private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Panel Panel3;
         private System.Windows.Forms.Label lblQuantiumFoam;
-        private System.Windows.Forms.Label lblQuantiumFoamProduceEnergy;
+        private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Panel Panel2;
         private System.Windows.Forms.Label lblString;
-        private System.Windows.Forms.Label lblStringProduceEnergy;
+        private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Panel Panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl10;
+        private System.Windows.Forms.Panel Panel10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl12;
+        private System.Windows.Forms.Panel Panel12;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl11;
+        private System.Windows.Forms.Panel Panel11;
     }
 }

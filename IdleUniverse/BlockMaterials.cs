@@ -14,7 +14,7 @@ namespace IdleUniverse
         public string Name { get; set; }
         public int BoughtTimes { get; set; }
         public int CurrentProducingEnergy { get; set; }
-        public int HowCost { get; set; }
+        public long HowCost { get; set; }
         public double IncreaseProducingEnergy { get; set; }
         public int TotalEnergy { get; set; }
         public Image MaterialImage { get; set; }

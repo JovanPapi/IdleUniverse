@@ -56,13 +56,13 @@ namespace IdleUniverse
             }
         }
 
-        private void LblUpgrade_MouseClick(object sender, MouseEventArgs e)
+        private void LblUpgrade_MouseClick(object sender, MouseEventArgs e) 
         {
             if(e.Button == MouseButtons.Left)
             {
                 if (material.CheckBeforeBuy(FirstTab.totalEnergyProduced))
                 {
-                    FirstTab.totalEnergyProduced -= material.HowCost;
+                    FirstTab.totalEnergyProduced -= (int)material.HowCost;
                     materials.ElementAt(material.HelperID).
                         UpgradeMaterial(SectionForm.multiplyNumber);
                     UpdateLabels(materials.ElementAt(material.HelperID));

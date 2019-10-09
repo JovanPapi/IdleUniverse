@@ -118,11 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Atom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\QuantiumImages\Atom.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AtomicImageForBeauty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\QuantiumImages\AtomicImageForBeauty.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BackPicture" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\QuantiumImages\BackPicture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carbon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\QuantiumImages\Carbon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Electron" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\QuantiumImages\Electron.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,14 +136,41 @@
   <data name="HiggsBoson" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\QuantiumImages\HiggsBoson.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Hydrogen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\QuantiumImages\Hydrogen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IonBeam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\QuantiumImages\IonBeam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Iron" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\QuantiumImages\Iron.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Isotope" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\QuantiumImages\Isotope.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NanoSectionImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\QuantiumImages\NanoSectionImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Neutrino" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\QuantiumImages\Neutrino.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Neutron" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\QuantiumImages\Neutron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Nucleus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\QuantiumImages\Nucleus.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Oxygen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\QuantiumImages\Oxygen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Photon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\QuantiumImages\Photon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Plasma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\QuantiumImages\Plasma.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Positron" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\QuantiumImages\Positron.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Proton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\QuantiumImages\Proton.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,7 +184,13 @@
   <data name="Quarks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\QuantiumImages\Quarks.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SoundWave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\QuantiumImages\SoundWave.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="StringElement" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\QuantiumImages\StringElement.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Xenon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\QuantiumImages\Xenon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

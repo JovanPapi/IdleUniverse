@@ -14,30 +14,32 @@ namespace IdleUniverse
     public partial class SectionForm : Form
     {
         public static int multiplyNumber;
-        public static string clickedMaterial;
         private enum TypeOfSection { Quantum,Nano,Complex,Bio }
         private List<BlockMaterials> SectionMaterials = new List<BlockMaterials>();
         private BlockMaterials AuxilaryObject;
-        private List<Panel> panels;
-        private string whichPanel = null;
+        private SectionForm sectionForm;
         public SectionForm(List<BlockMaterials> list,Enum Type)
         {
             InitializeComponent();
             SectionMaterials = list;
             multiplyNumber = 1;
-            clickedMaterial = "";
             lblAtomicEnergyNumber.Text = FirstTab.totalEnergyProduced.ToString();
             timerForEnergyProduce.Start();
             AuxilaryObject = null;
             pbAtomicEnergyPictureNumber.Image = Resources.AtomicImageForBeauty;
             pbAtomicEnergyPictureNumber.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbGoBackToFirstTab.Image = Resources.BackPicture;
+            pbGoBackToFirstTab.SizeMode = PictureBoxSizeMode.StretchImage;
+
             if (Type.ToString() == TypeOfSection.Quantum.ToString()){
                 FillQuantumImages();
+                this.AutoScroll = false;
             }
-            /*if (Type.Equals(TypeOfSection.Nano)) {
+            if (Type.ToString() == TypeOfSection.Nano.ToString()) {
                 FillNanoImages();
+                this.AutoScroll = true;
             }
-            if (Type.Equals(TypeOfSection.Nano)){
+            /*if (Type.Equals(TypeOfSection.Nano)){
                 FillComplexImages();
             }
             if (Type.Equals(TypeOfSection.Nano)) {
@@ -45,11 +47,10 @@ namespace IdleUniverse
             }*/
             FillLabelNames();
             UpdateEnergyShowingLabels();
-            FillPanelList();
             FillPanelNames();
 
         }
-        public void FillQuantumImages()
+        private void FillQuantumImages()
         {
             AuxilaryObject = new BlockMaterials().FindMaterial("String", SectionMaterials);
             Panel1.BackgroundImage = AuxilaryObject.MaterialImage;
@@ -87,49 +88,83 @@ namespace IdleUniverse
             Panel9.BackgroundImage = AuxilaryObject.MaterialImage;
             Panel9.BackgroundImageLayout = ImageLayout.Center;
 
-            pbGoBackToFirstTab.Image = Resources.BackPicture;
-            pbGoBackToFirstTab.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+        private void FillNanoImages()
+        {
+            AuxilaryObject = new BlockMaterials().FindMaterial("Positron", SectionMaterials);
+            Panel1.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel1.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Nucleus", SectionMaterials);
+            Panel2.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel2.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Atom", SectionMaterials);
+            Panel3.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel3.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Plasma", SectionMaterials);
+            Panel4.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel4.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Sound wave", SectionMaterials);
+            Panel5.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel5.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Ion beam", SectionMaterials);
+            Panel6.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel6.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Isotope", SectionMaterials);
+            Panel7.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel7.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Hydrogen", SectionMaterials);
+            Panel8.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel8.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Carbon", SectionMaterials);
+            Panel9.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel9.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Oxygen", SectionMaterials);
+            Panel10.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel10.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Iron", SectionMaterials);
+            Panel11.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel11.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Xenon", SectionMaterials);
+            Panel12.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel12.BackgroundImageLayout = ImageLayout.Center;
+
+            Panel10.Name = SectionMaterials.ElementAt(9).Name;
+            Panel11.Name = SectionMaterials.ElementAt(10).Name;
+            Panel12.Name = SectionMaterials.ElementAt(11).Name;
         }
         private void FillLabelNames()
         {
-            lblElectron.Text = new BlockMaterials().FindNameForLabel("Electron", FirstTab.QuantumMaterials.ToList());
-            lblHiggsBoson.Text = new BlockMaterials().FindNameForLabel("Higgs boson", FirstTab.QuantumMaterials.ToList());
-            lblNeutrino.Text = new BlockMaterials().FindNameForLabel("Neutrino", FirstTab.QuantumMaterials.ToList());
-            lblNeutron.Text = new BlockMaterials().FindNameForLabel("Neutron", FirstTab.QuantumMaterials.ToList());
-            lblPhoton.Text = new BlockMaterials().FindNameForLabel("Proton", FirstTab.QuantumMaterials.ToList());
-            lblProton.Text = new BlockMaterials().FindNameForLabel("Photon", FirstTab.QuantumMaterials.ToList());
-            lblQuantiumFoam.Text = new BlockMaterials().FindNameForLabel("Quantium foam", FirstTab.QuantumMaterials.ToList());
-            lblString.Text = new BlockMaterials().FindNameForLabel("String", FirstTab.QuantumMaterials.ToList());
-            lblQuarks.Text = new BlockMaterials().FindNameForLabel("Quark", FirstTab.QuantumMaterials.ToList());
+            lbl1.Text = SectionMaterials.ElementAt(0).Name;
+            lbl2.Text = SectionMaterials.ElementAt(1).Name;
+            lbl3.Text = SectionMaterials.ElementAt(2).Name;
+            lbl4.Text = SectionMaterials.ElementAt(3).Name;
+            lbl5.Text = SectionMaterials.ElementAt(4).Name;
+            lbl6.Text = SectionMaterials.ElementAt(5).Name;
+            lbl7.Text = SectionMaterials.ElementAt(6).Name;
+            lbl8.Text = SectionMaterials.ElementAt(7).Name;
+            lbl9.Text = SectionMaterials.ElementAt(8).Name;
 
-            lblElectron.Left = 70;
-            lblHiggsBoson.Left = 70;
-            lblNeutrino.Left = 70;
-            lblNeutron.Left = 70;
-            lblPhoton.Left = 70;
-            lblProton.Left = 70;
-            lblQuantiumFoam.Left = 60;
-            lblString.Left = 70;
+            lbl1.Left = lbl2.Left = lbl3.Left = lbl4.Left = lbl5.Left = lbl6.Left =
+                lbl7.Left = lbl8.Left = lbl9.Left = lbl10.Left = lbl11.Left = lbl12.Left = 70;
 
-            lblElectron.BackColor = Color.Transparent;
-            lblHiggsBoson.BackColor = Color.Transparent;
-            lblNeutrino.BackColor = Color.Transparent;
-            lblNeutron.BackColor = Color.Transparent;
-            lblPhoton.BackColor = Color.Transparent;
-            lblProton.BackColor = Color.Transparent;
-            lblQuantiumFoam.BackColor = Color.Transparent;
-            lblString.BackColor = Color.Transparent;
-            lblQuarks.BackColor = Color.Transparent;
+            lbl1.BackColor = lbl2.BackColor = lbl3.BackColor = lbl4.BackColor = lbl5.BackColor = lbl6.BackColor =
+                lbl7.BackColor = lbl8.BackColor = lbl9.BackColor = lbl10.BackColor =
+                lbl11.BackColor = lbl12.BackColor = Color.Transparent;
 
-            lblElectron.ForeColor = Color.Red;
-            lblHiggsBoson.ForeColor = Color.Red;
-            lblNeutrino.ForeColor = Color.Red;
-            lblNeutron.ForeColor = Color.Red;
-            lblPhoton.ForeColor = Color.Red;
-            lblProton.ForeColor = Color.Red;
-            lblQuantiumFoam.ForeColor = Color.Red;
-            lblString.ForeColor = Color.Red;
-            lblQuarks.ForeColor = Color.Red;
+            lbl1.ForeColor = lbl2.ForeColor = lbl3.ForeColor = lbl4.ForeColor = lbl5.ForeColor = lbl6.ForeColor =
+                lbl7.ForeColor = lbl8.ForeColor = lbl9.ForeColor = lbl10.BackColor =
+                lbl11.BackColor = lbl12.BackColor = Color.Red;
         }
         private void FillPanelNames()
         {
@@ -155,29 +190,21 @@ namespace IdleUniverse
         private void UpdateEnergyShowingLabels()
         {
             int i = 0;
-            lblStringProduceEnergy.Text = FirstTab.QuantumMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-            lblQuantiumFoamProduceEnergy.Text = FirstTab.QuantumMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-            lblNeutrinoProduceEnergy.Text = FirstTab.QuantumMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-            lblHiggsBosonProduceEnergy.Text = FirstTab.QuantumMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-            lblPhotonProduceEnergy.Text = FirstTab.QuantumMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-            lblQuarkProduceEnergy.Text = FirstTab.QuantumMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-            lblElectronProduceEnergy.Text = FirstTab.QuantumMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-            lblNeutronProduceEnergy.Text = FirstTab.QuantumMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-            lblProtonProduceEnergy.Text = FirstTab.QuantumMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-        }
-        private void FillPanelList()
-        {
-            panels = new List<Panel>();
-            panels.Add(Panel1);
-            panels.Add(Panel2);
-            panels.Add(Panel3);
-            panels.Add(Panel4);
-            panels.Add(Panel5);
-            panels.Add(Panel6);
-            panels.Add(Panel7);
-            panels.Add(Panel8);
-            panels.Add(Panel9);
-
+            lbl1.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
+            lbl2.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
+            lbl3.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
+            lbl4.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
+            lbl5.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
+            lbl6.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
+            lbl7.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
+            lbl8.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
+            lbl9.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
+            if(SectionMaterials.Count >= 10)
+            {
+                lbl10.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
+                lbl11.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
+                lbl12.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
+            }
         }
         private void TimerForEnergyProduce_Tick(object sender, EventArgs e)
         {
@@ -190,25 +217,14 @@ namespace IdleUniverse
             this.Close();
             
         }
-        private void ClickedPanel(object sender, MouseEventArgs e)
+        private void ClickedMaterialPanel(object sender, MouseEventArgs e)
         {
             if(e.Button == MouseButtons.Left)
             {
-                var panel = sender as Panel;
-                int i = 0;
-                while (i != 15)
+                var panelMaterial = sender as Panel;
+                if(panelMaterial != null)
                 {
-                    if (panel.Name.Equals(SectionMaterials.ElementAt(i).Name))
-                    {
-                        whichPanel = panel.Name;
-                        break;
-                    }
-                    i++;
-                }
-                if(whichPanel != "" && whichPanel != null)
-                {
-                    clickedMaterial = whichPanel;
-                    MaterialDetailsForm form = new MaterialDetailsForm(SectionMaterials, clickedMaterial);
+                    MaterialDetailsForm form = new MaterialDetailsForm(SectionMaterials, panelMaterial.Name);
                     if (form.ShowDialog() == DialogResult.OK)
                         form.Close();
                     else

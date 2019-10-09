@@ -132,5 +132,44 @@
   <ItemGroup>
     <None Include="QuantiumImages\BackPicture.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Plasma.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Positron.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\SoundWave.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Xenon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Atom.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Carbon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Hydrogen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\IonBeam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Iron.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Isotope.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Nucleus.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Oxygen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\NanoSectionImage.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

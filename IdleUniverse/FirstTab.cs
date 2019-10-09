@@ -13,10 +13,10 @@ namespace IdleUniverse
 {
     public partial class FirstTab : Form
     {
-        public static List<BlockMaterials> QuantumMaterials = new List<BlockMaterials>();
-        public static List<BlockMaterials> NanoMaterials = new List<BlockMaterials>();
-        public static List<BlockMaterials> ComplexMaterials = new List<BlockMaterials>();
-        public static List<BlockMaterials> BioMaterials = new List<BlockMaterials>();
+        public List<BlockMaterials> QuantumMaterials = new List<BlockMaterials>();
+        public List<BlockMaterials> NanoMaterials = new List<BlockMaterials>();
+        public List<BlockMaterials> ComplexMaterials = new List<BlockMaterials>();
+        public List<BlockMaterials> BioMaterials = new List<BlockMaterials>();
         private PictureBox pbAtomicEnergyImage;
         private Label lblTotalAtomicEnergy;
         private RadioButton rbQuick;
@@ -31,22 +31,23 @@ namespace IdleUniverse
         private IContainer components;
         private Panel BioPanel;
         private Label label1;
-        private Label label2;
+        private Label label2;   
         private Label label3;
         private Label label4;
         public static int totalEnergyProduced;
         private SectionForm sectionForm;
+        private FirstTab firstTab;
         public enum TypeOfSection { Quantum,Nano,Complex,Bio};
         public FirstTab()
         {
-            totalEnergyProduced = 30;  
             InitializeComponent();
+            totalEnergyProduced = 30;
+            pbAtomicEnergyImage.Image = Resources.AtomicImageForBeauty;
+            timerForAtomicEnergyProduce.Start();
             fillQuantumList();
             fillNanoList();
             fillComplexList();
             fillBioList();
-            pbAtomicEnergyImage.Image = Resources.AtomicImageForBeauty;
-            timerForAtomicEnergyProduce.Start();
         }
         public void fillQuantumList()
         {
@@ -88,43 +89,45 @@ namespace IdleUniverse
         public void fillNanoList()
         {
             NanoMaterials.Add(new BlockMaterials(name: "Positron", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Positron));
             NanoMaterials.Add(new BlockMaterials(name: "Nucleus", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Nucleus));
             NanoMaterials.Add(new BlockMaterials(name: "Atom", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Atom));
             NanoMaterials.Add(new BlockMaterials(name: "Plasma", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Plasma));
             NanoMaterials.Add(new BlockMaterials(name: "Sound wave", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.SoundWave));
             NanoMaterials.Add(new BlockMaterials(name: "Ion beam", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.IonBeam));
             NanoMaterials.Add(new BlockMaterials(name: "Isotope", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Isotope));
             NanoMaterials.Add(new BlockMaterials(name: "Hydrogen", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Hydrogen));
             NanoMaterials.Add(new BlockMaterials(name: "Carbon", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Carbon));
             NanoMaterials.Add(new BlockMaterials(name: "Oxygen", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Oxygen));
             NanoMaterials.Add(new BlockMaterials(name: "Iron", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Iron));
             NanoMaterials.Add(new BlockMaterials(name: "Xenon", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Xenon));
             for (int i = 0; i < NanoMaterials.Count; i++)
             {
                 NanoMaterials[i].HelperID = i;
                 if (i == 0)
                 {
-                    NanoMaterials[i].HowCost = 6 * 3;
-                    NanoMaterials[i].IncreaseProducingEnergy = 2 * 2;
+                    NanoMaterials[i].HowCost = 354294;
+                    NanoMaterials[i].IncreaseProducingEnergy = 31839;
                 }
                 else
                 {
                     NanoMaterials[i].HowCost = NanoMaterials[i - 1].HowCost * 3;
-                    NanoMaterials[i].IncreaseProducingEnergy = NanoMaterials[i - 1].IncreaseProducingEnergy * 2.81;
+                    NanoMaterials[i].IncreaseProducingEnergy = NanoMaterials[i - 1].IncreaseProducingEnergy * 2.58;
                 }
             }
+            NanoPanel.BackgroundImage = Resources.NanoSectionImage;
+            NanoPanel.BackgroundImageLayout = ImageLayout.Center;
         }
         public void fillComplexList()
         {
@@ -157,13 +160,13 @@ namespace IdleUniverse
                 ComplexMaterials[i].HelperID = i;
                 if (i == 0)
                 {
-                    ComplexMaterials[i].HowCost = 6 * 3;
-                    ComplexMaterials[i].IncreaseProducingEnergy = 2 * 2;
+                    ComplexMaterials[i].HowCost = 188286357653;
+                    ComplexMaterials[i].IncreaseProducingEnergy = 4217464978;
                 }
                 else
                 {
                     ComplexMaterials[i].HowCost = ComplexMaterials[i - 1].HowCost * 3;
-                    ComplexMaterials[i].IncreaseProducingEnergy = ComplexMaterials[i - 1].IncreaseProducingEnergy * 2.81;
+                    ComplexMaterials[i].IncreaseProducingEnergy = ComplexMaterials[i - 1].IncreaseProducingEnergy * 2.74;
                 }
             }
 
@@ -220,52 +223,6 @@ namespace IdleUniverse
 
 
         }
-        private void QuantumPanel_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                sectionForm = new SectionForm(QuantumMaterials,TypeOfSection.Quantum);
-                this.Opacity = 0;
-                if (sectionForm.ShowDialog() == DialogResult.Cancel)
-                    this.Opacity = 100;
-                
-            }
-        }
-        private void NanoPanel_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                sectionForm = new SectionForm(NanoMaterials,TypeOfSection.Nano);
-                this.Opacity = 0;
-                if (sectionForm.ShowDialog() == DialogResult.Cancel)
-                    this.Opacity = 100;
-            }
-        }
-
-        private void ComplexPanel_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                sectionForm = new SectionForm(ComplexMaterials,TypeOfSection.Complex);
-                if (sectionForm.ShowDialog() == DialogResult.OK)
-                    sectionForm.Close();
-                else
-                    sectionForm.Close();
-            }
-        }
-
-        private void BioPanel_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                sectionForm = new SectionForm(BioMaterials,TypeOfSection.Bio);
-                if (sectionForm.ShowDialog() == DialogResult.OK)
-                    sectionForm.Close();
-                else
-                    sectionForm.Close();
-            }
-        }
-
         private void TimerForAtomicEnergyProduce_Tick(object sender, EventArgs e)
         {
             foreach (var item in QuantumMaterials)
@@ -383,7 +340,7 @@ namespace IdleUniverse
             this.QuantumPanel.Name = "QuantumPanel";
             this.QuantumPanel.Size = new System.Drawing.Size(128, 128);
             this.QuantumPanel.TabIndex = 17;
-            this.QuantumPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.QuantumPanel_MouseClick);
+            this.QuantumPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedSectionPanel);
             // 
             // label1
             // 
@@ -402,7 +359,7 @@ namespace IdleUniverse
             this.NanoPanel.Name = "NanoPanel";
             this.NanoPanel.Size = new System.Drawing.Size(128, 128);
             this.NanoPanel.TabIndex = 18;
-            this.NanoPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.NanoPanel_MouseClick);
+            this.NanoPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedSectionPanel);
             // 
             // label2
             // 
@@ -421,7 +378,7 @@ namespace IdleUniverse
             this.ComplexPanel.Name = "ComplexPanel";
             this.ComplexPanel.Size = new System.Drawing.Size(128, 128);
             this.ComplexPanel.TabIndex = 18;
-            this.ComplexPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ComplexPanel_MouseClick);
+            this.ComplexPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedSectionPanel);
             // 
             // label3
             // 
@@ -446,7 +403,7 @@ namespace IdleUniverse
             this.BioPanel.Name = "BioPanel";
             this.BioPanel.Size = new System.Drawing.Size(128, 128);
             this.BioPanel.TabIndex = 18;
-            this.BioPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BioPanel_MouseClick);
+            this.BioPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickedSectionPanel);
             // 
             // label4
             // 
@@ -488,7 +445,32 @@ namespace IdleUniverse
 
         }
 
-
+        private void ClickedSectionPanel(object sender, MouseEventArgs e)
+        {
+            var panel = sender as Panel;
+            firstTab = new FirstTab();
+            if (e.Button == MouseButtons.Left)
+            {
+                if(panel != null)
+                {
+                    if (panel.Name.Equals(QuantumPanel.Name))
+                        sectionForm = new SectionForm(QuantumMaterials, TypeOfSection.Quantum);
+                    if (panel.Name.Equals(NanoPanel.Name))
+                        sectionForm = new SectionForm(NanoMaterials, TypeOfSection.Nano);
+                    if (panel.Name.Equals(ComplexPanel.Name))
+                        sectionForm = new SectionForm(ComplexMaterials, TypeOfSection.Complex);
+                    if (panel.Name.Equals(BioPanel.Name))
+                        sectionForm = new SectionForm(BioMaterials, TypeOfSection.Bio);
+                    
+                    firstTab.Opacity = 0;
+                    if (sectionForm.ShowDialog() == DialogResult.OK)
+                        sectionForm.Close();
+                    else
+                        sectionForm.Close();
+                    firstTab.Opacity = 100;
+                }
+            }
+        }
     }
 }
 
