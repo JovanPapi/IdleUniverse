@@ -13,7 +13,7 @@ namespace IdleUniverse
 {
     public partial class FirstTab : Form
     {
-        public static List<BlockMaterials> QuantiumMaterials = new List<BlockMaterials>();
+        public static List<BlockMaterials> QuantumMaterials = new List<BlockMaterials>();
         public static List<BlockMaterials> NanoMaterials = new List<BlockMaterials>();
         public static List<BlockMaterials> ComplexMaterials = new List<BlockMaterials>();
         public static List<BlockMaterials> BioMaterials = new List<BlockMaterials>();
@@ -24,7 +24,7 @@ namespace IdleUniverse
         private RadioButton rbX100;
         private RadioButton rbX10;
         private RadioButton rbX1;
-        private Panel QuantiumPanel;
+        private Panel QuantumPanel;
         private Panel NanoPanel;
         private Panel ComplexPanel;
         private Timer timerForAtomicEnergyProduce;
@@ -35,53 +35,55 @@ namespace IdleUniverse
         private Label label3;
         private Label label4;
         public static int totalEnergyProduced;
+        private SectionForm sectionForm;
+        public enum TypeOfSection { Quantum,Nano,Complex,Bio};
         public FirstTab()
         {
             totalEnergyProduced = 30;  
             InitializeComponent();
-            fillQuantiumList();
+            fillQuantumList();
             fillNanoList();
             fillComplexList();
             fillBioList();
             pbAtomicEnergyImage.Image = Resources.AtomicImageForBeauty;
             timerForAtomicEnergyProduce.Start();
         }
-        public void fillQuantiumList()
+        public void fillQuantumList()
         {
-            QuantiumMaterials.Add(new BlockMaterials(name: "String", boughtTimes: 0,
+            QuantumMaterials.Add(new BlockMaterials(name: "String", boughtTimes: 0,
                 incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.StringElement));
-            QuantiumMaterials.Add(new BlockMaterials(name: "Quantium foam", boughtTimes: 0,
+            QuantumMaterials.Add(new BlockMaterials(name: "Quantum foam", boughtTimes: 0,
                 incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.QuantumFoam));
-            QuantiumMaterials.Add(new BlockMaterials(name: "Neutrino", boughtTimes: 0,
+            QuantumMaterials.Add(new BlockMaterials(name: "Neutrino", boughtTimes: 0,
                 incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Neutrino));
-            QuantiumMaterials.Add(new BlockMaterials(name: "Higgs boson", boughtTimes: 0,
+            QuantumMaterials.Add(new BlockMaterials(name: "Higgs boson", boughtTimes: 0,
                 incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.HiggsBoson));
-            QuantiumMaterials.Add(new BlockMaterials(name: "Photon", boughtTimes: 0,
+            QuantumMaterials.Add(new BlockMaterials(name: "Photon", boughtTimes: 0,
                 incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Photon));
-            QuantiumMaterials.Add(new BlockMaterials(name: "Quark", boughtTimes: 0,
+            QuantumMaterials.Add(new BlockMaterials(name: "Quark", boughtTimes: 0,
                 incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Quarks));
-            QuantiumMaterials.Add(new BlockMaterials(name: "Electron", boughtTimes: 0,
+            QuantumMaterials.Add(new BlockMaterials(name: "Electron", boughtTimes: 0,
                 incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Electron));
-            QuantiumMaterials.Add(new BlockMaterials(name: "Neutron", boughtTimes: 0,
+            QuantumMaterials.Add(new BlockMaterials(name: "Neutron", boughtTimes: 0,
                 incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Neutron));
-            QuantiumMaterials.Add(new BlockMaterials(name: "Proton", boughtTimes: 0,
+            QuantumMaterials.Add(new BlockMaterials(name: "Proton", boughtTimes: 0,
                 incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Proton));
-            for (int i = 0; i < QuantiumMaterials.Count; i++)
+            for (int i = 0; i < QuantumMaterials.Count; i++)
             {
-                QuantiumMaterials[i].HelperID = i;
+                QuantumMaterials[i].HelperID = i;
                 if (i == 0)
                 {
-                    QuantiumMaterials[i].HowCost = 6 * 3;
-                    QuantiumMaterials[i].IncreaseProducingEnergy = 2 * 2;
+                    QuantumMaterials[i].HowCost = 6 * 3;
+                    QuantumMaterials[i].IncreaseProducingEnergy = 2 * 2;
                 }
                 else
                 {
-                    QuantiumMaterials[i].HowCost = QuantiumMaterials[i - 1].HowCost * 3;
-                    QuantiumMaterials[i].IncreaseProducingEnergy = QuantiumMaterials[i - 1].IncreaseProducingEnergy * 2.81;
+                    QuantumMaterials[i].HowCost = QuantumMaterials[i - 1].HowCost * 3;
+                    QuantumMaterials[i].IncreaseProducingEnergy = QuantumMaterials[i - 1].IncreaseProducingEnergy * 2.81;
                 }
             }
-            QuantiumPanel.BackgroundImage = Resources.QuantumPanel;
-            QuantiumPanel.BackgroundImageLayout = ImageLayout.Center;
+            QuantumPanel.BackgroundImage = Resources.QuantumPanel;
+            QuantumPanel.BackgroundImageLayout = ImageLayout.Center;
         }
         public void fillNanoList()
         {
@@ -218,13 +220,13 @@ namespace IdleUniverse
 
 
         }
-        private void QuantiumPanel_MouseClick(object sender, MouseEventArgs e)
+        private void QuantumPanel_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                QuantiumForm newForm = new QuantiumForm();
+                sectionForm = new SectionForm(QuantumMaterials,TypeOfSection.Quantum);
                 this.Opacity = 0;
-                if (newForm.ShowDialog() == DialogResult.Cancel)
+                if (sectionForm.ShowDialog() == DialogResult.Cancel)
                     this.Opacity = 100;
                 
             }
@@ -233,9 +235,9 @@ namespace IdleUniverse
         {
             if (e.Button == MouseButtons.Left)
             {
-                NanoForm form = new NanoForm();
+                sectionForm = new SectionForm(NanoMaterials,TypeOfSection.Nano);
                 this.Opacity = 0;
-                if (form.ShowDialog() == DialogResult.Cancel)
+                if (sectionForm.ShowDialog() == DialogResult.Cancel)
                     this.Opacity = 100;
             }
         }
@@ -244,11 +246,11 @@ namespace IdleUniverse
         {
             if (e.Button == MouseButtons.Left)
             {
-                ComplexForm form = new ComplexForm();
-                if (form.ShowDialog() == DialogResult.OK)
-                    form.Close();
+                sectionForm = new SectionForm(ComplexMaterials,TypeOfSection.Complex);
+                if (sectionForm.ShowDialog() == DialogResult.OK)
+                    sectionForm.Close();
                 else
-                    form.Close();
+                    sectionForm.Close();
             }
         }
 
@@ -256,17 +258,17 @@ namespace IdleUniverse
         {
             if (e.Button == MouseButtons.Left)
             {
-                BioForm form = new BioForm();
-                if (form.ShowDialog() == DialogResult.OK)
-                    form.Close();
+                sectionForm = new SectionForm(BioMaterials,TypeOfSection.Bio);
+                if (sectionForm.ShowDialog() == DialogResult.OK)
+                    sectionForm.Close();
                 else
-                    form.Close();
+                    sectionForm.Close();
             }
         }
 
         private void TimerForAtomicEnergyProduce_Tick(object sender, EventArgs e)
         {
-            foreach (var item in QuantiumMaterials)
+            foreach (var item in QuantumMaterials)
                 totalEnergyProduced += item.CurrentProducingEnergy;
             lblTotalAtomicEnergy.Text = totalEnergyProduced.ToString();
         }
@@ -281,17 +283,17 @@ namespace IdleUniverse
             this.rbX100 = new System.Windows.Forms.RadioButton();
             this.rbX10 = new System.Windows.Forms.RadioButton();
             this.rbX1 = new System.Windows.Forms.RadioButton();
-            this.QuantiumPanel = new System.Windows.Forms.Panel();
+            this.QuantumPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.NanoPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.ComplexPanel = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.timerForAtomicEnergyProduce = new System.Windows.Forms.Timer(this.components);
             this.BioPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbAtomicEnergyImage)).BeginInit();
-            this.QuantiumPanel.SuspendLayout();
+            this.QuantumPanel.SuspendLayout();
             this.NanoPanel.SuspendLayout();
             this.ComplexPanel.SuspendLayout();
             this.BioPanel.SuspendLayout();
@@ -374,14 +376,24 @@ namespace IdleUniverse
             this.rbX1.Text = "x1";
             this.rbX1.UseVisualStyleBackColor = true;
             // 
-            // QuantiumPanel
+            // QuantumPanel
             // 
-            this.QuantiumPanel.Controls.Add(this.label1);
-            this.QuantiumPanel.Location = new System.Drawing.Point(11, 106);
-            this.QuantiumPanel.Name = "QuantiumPanel";
-            this.QuantiumPanel.Size = new System.Drawing.Size(128, 128);
-            this.QuantiumPanel.TabIndex = 17;
-            this.QuantiumPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.QuantiumPanel_MouseClick);
+            this.QuantumPanel.Controls.Add(this.label1);
+            this.QuantumPanel.Location = new System.Drawing.Point(11, 106);
+            this.QuantumPanel.Name = "QuantumPanel";
+            this.QuantumPanel.Size = new System.Drawing.Size(128, 128);
+            this.QuantumPanel.TabIndex = 17;
+            this.QuantumPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.QuantumPanel_MouseClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 10F);
+            this.label1.Location = new System.Drawing.Point(29, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Quantum";
             // 
             // NanoPanel
             // 
@@ -392,6 +404,16 @@ namespace IdleUniverse
             this.NanoPanel.TabIndex = 18;
             this.NanoPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.NanoPanel_MouseClick);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 10F);
+            this.label2.Location = new System.Drawing.Point(44, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Nano";
+            // 
             // ComplexPanel
             // 
             this.ComplexPanel.Controls.Add(this.label3);
@@ -400,6 +422,16 @@ namespace IdleUniverse
             this.ComplexPanel.Size = new System.Drawing.Size(128, 128);
             this.ComplexPanel.TabIndex = 18;
             this.ComplexPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ComplexPanel_MouseClick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 10F);
+            this.label3.Location = new System.Drawing.Point(34, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Complex";
             // 
             // timerForAtomicEnergyProduce
             // 
@@ -415,36 +447,6 @@ namespace IdleUniverse
             this.BioPanel.Size = new System.Drawing.Size(128, 128);
             this.BioPanel.TabIndex = 18;
             this.BioPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BioPanel_MouseClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 10F);
-            this.label1.Location = new System.Drawing.Point(29, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Quantium";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 10F);
-            this.label2.Location = new System.Drawing.Point(44, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nano";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 10F);
-            this.label3.Location = new System.Drawing.Point(34, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Complex";
             // 
             // label4
             // 
@@ -462,7 +464,7 @@ namespace IdleUniverse
             this.Controls.Add(this.BioPanel);
             this.Controls.Add(this.ComplexPanel);
             this.Controls.Add(this.NanoPanel);
-            this.Controls.Add(this.QuantiumPanel);
+            this.Controls.Add(this.QuantumPanel);
             this.Controls.Add(this.rbQuick);
             this.Controls.Add(this.rbMAX);
             this.Controls.Add(this.rbX100);
@@ -473,8 +475,8 @@ namespace IdleUniverse
             this.Name = "FirstTab";
             this.Text = "MenuForm";
             ((System.ComponentModel.ISupportInitialize)(this.pbAtomicEnergyImage)).EndInit();
-            this.QuantiumPanel.ResumeLayout(false);
-            this.QuantiumPanel.PerformLayout();
+            this.QuantumPanel.ResumeLayout(false);
+            this.QuantumPanel.PerformLayout();
             this.NanoPanel.ResumeLayout(false);
             this.NanoPanel.PerformLayout();
             this.ComplexPanel.ResumeLayout(false);

@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace IdleUniverse
 {
-    public partial class QuantiumDetailsForm : Form
+    public partial class MaterialDetailsForm : Form
     {
         private BlockMaterials material;
-        public QuantiumDetailsForm()
+        private List<BlockMaterials> materials = new List<BlockMaterials>();
+        public MaterialDetailsForm(List<BlockMaterials> list,string clickedMaterial)
         {
-            InitializeComponent();
-            
-            material = new BlockMaterials().FindMaterial(QuantiumForm.clickedMaterial,
-                FirstTab.QuantiumMaterials);
+            InitializeComponent();            
+            material = new BlockMaterials().FindMaterial(clickedMaterial,list);
+            materials = list;
             SetInitialLabels();
             
         }
@@ -63,9 +63,9 @@ namespace IdleUniverse
                 if (material.CheckBeforeBuy(FirstTab.totalEnergyProduced))
                 {
                     FirstTab.totalEnergyProduced -= material.HowCost;
-                    FirstTab.QuantiumMaterials.ElementAt(material.HelperID).
-                        UpgradeMaterial(QuantiumForm.multiplyNumber);
-                    UpdateLabels(FirstTab.QuantiumMaterials.ElementAt(material.HelperID));
+                    materials.ElementAt(material.HelperID).
+                        UpgradeMaterial(SectionForm.multiplyNumber);
+                    UpdateLabels(materials.ElementAt(material.HelperID));
                 }
             }
         }

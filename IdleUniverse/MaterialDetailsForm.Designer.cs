@@ -1,6 +1,6 @@
 ﻿namespace IdleUniverse
 {
-    partial class QuantiumDetailsForm
+    partial class MaterialDetailsForm
     {
         /// <summary>
         /// Required designer variable.
