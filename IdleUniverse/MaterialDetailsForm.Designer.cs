@@ -34,11 +34,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblClose = new System.Windows.Forms.Label();
+            this.lblUpgrade = new System.Windows.Forms.Label();
             this.lblAtomicEnergyCost = new System.Windows.Forms.Label();
             this.lblTotalEnergyIncome = new System.Windows.Forms.Label();
             this.lblIncreaseIncoming = new System.Windows.Forms.Label();
-            this.lblClose = new System.Windows.Forms.Label();
-            this.lblUpgrade = new System.Windows.Forms.Label();
             this.ImagePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaterialInformation)).BeginInit();
             this.SuspendLayout();
@@ -98,36 +98,6 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Increase : ";
             // 
-            // lblAtomicEnergyCost
-            // 
-            this.lblAtomicEnergyCost.AutoSize = true;
-            this.lblAtomicEnergyCost.Font = new System.Drawing.Font("Arial", 8.25F);
-            this.lblAtomicEnergyCost.Location = new System.Drawing.Point(231, 209);
-            this.lblAtomicEnergyCost.Name = "lblAtomicEnergyCost";
-            this.lblAtomicEnergyCost.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblAtomicEnergyCost.Size = new System.Drawing.Size(0, 14);
-            this.lblAtomicEnergyCost.TabIndex = 4;
-            // 
-            // lblTotalEnergyIncome
-            // 
-            this.lblTotalEnergyIncome.AutoSize = true;
-            this.lblTotalEnergyIncome.Font = new System.Drawing.Font("Arial", 8.25F);
-            this.lblTotalEnergyIncome.Location = new System.Drawing.Point(231, 252);
-            this.lblTotalEnergyIncome.Name = "lblTotalEnergyIncome";
-            this.lblTotalEnergyIncome.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblTotalEnergyIncome.Size = new System.Drawing.Size(0, 14);
-            this.lblTotalEnergyIncome.TabIndex = 5;
-            // 
-            // lblIncreaseIncoming
-            // 
-            this.lblIncreaseIncoming.AutoSize = true;
-            this.lblIncreaseIncoming.Font = new System.Drawing.Font("Arial", 8.25F);
-            this.lblIncreaseIncoming.Location = new System.Drawing.Point(231, 294);
-            this.lblIncreaseIncoming.Name = "lblIncreaseIncoming";
-            this.lblIncreaseIncoming.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblIncreaseIncoming.Size = new System.Drawing.Size(0, 14);
-            this.lblIncreaseIncoming.TabIndex = 6;
-            // 
             // lblClose
             // 
             this.lblClose.AutoSize = true;
@@ -152,22 +122,52 @@
             this.lblUpgrade.Text = "Upgrade";
             this.lblUpgrade.MouseClick += new System.Windows.Forms.MouseEventHandler(this.LblUpgrade_MouseClick);
             // 
-            // QuantiumDetailsForm
+            // lblAtomicEnergyCost
+            // 
+            this.lblAtomicEnergyCost.AutoSize = true;
+            this.lblAtomicEnergyCost.Font = new System.Drawing.Font("Arial", 8.55F);
+            this.lblAtomicEnergyCost.Location = new System.Drawing.Point(83, 210);
+            this.lblAtomicEnergyCost.Name = "lblAtomicEnergyCost";
+            this.lblAtomicEnergyCost.Size = new System.Drawing.Size(41, 15);
+            this.lblAtomicEnergyCost.TabIndex = 9;
+            this.lblAtomicEnergyCost.Text = "label4";
+            // 
+            // lblTotalEnergyIncome
+            // 
+            this.lblTotalEnergyIncome.AutoSize = true;
+            this.lblTotalEnergyIncome.Font = new System.Drawing.Font("Arial", 8.55F);
+            this.lblTotalEnergyIncome.Location = new System.Drawing.Point(83, 252);
+            this.lblTotalEnergyIncome.Name = "lblTotalEnergyIncome";
+            this.lblTotalEnergyIncome.Size = new System.Drawing.Size(41, 15);
+            this.lblTotalEnergyIncome.TabIndex = 10;
+            this.lblTotalEnergyIncome.Text = "label5";
+            // 
+            // lblIncreaseIncoming
+            // 
+            this.lblIncreaseIncoming.AutoSize = true;
+            this.lblIncreaseIncoming.Font = new System.Drawing.Font("Arial", 8.55F);
+            this.lblIncreaseIncoming.Location = new System.Drawing.Point(83, 294);
+            this.lblIncreaseIncoming.Name = "lblIncreaseIncoming";
+            this.lblIncreaseIncoming.Size = new System.Drawing.Size(41, 15);
+            this.lblIncreaseIncoming.TabIndex = 11;
+            this.lblIncreaseIncoming.Text = "label6";
+            // 
+            // MaterialDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(223, 363);
-            this.Controls.Add(this.lblUpgrade);
-            this.Controls.Add(this.lblClose);
             this.Controls.Add(this.lblIncreaseIncoming);
             this.Controls.Add(this.lblTotalEnergyIncome);
             this.Controls.Add(this.lblAtomicEnergyCost);
+            this.Controls.Add(this.lblUpgrade);
+            this.Controls.Add(this.lblClose);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ImagePanel);
             this.Font = new System.Drawing.Font("Arial", 8.25F);
-            this.Name = "QuantiumDetailsForm";
+            this.Name = "MaterialDetailsForm";
             this.ImagePanel.ResumeLayout(false);
             this.ImagePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaterialInformation)).EndInit();
@@ -182,12 +182,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblAtomicEnergyCost;
-        private System.Windows.Forms.Label lblTotalEnergyIncome;
-        private System.Windows.Forms.Label lblIncreaseIncoming;
         private System.Windows.Forms.Label lblMaterialName;
         private System.Windows.Forms.PictureBox pbMaterialInformation;
         private System.Windows.Forms.Label lblClose;
         private System.Windows.Forms.Label lblUpgrade;
+        private System.Windows.Forms.Label lblAtomicEnergyCost;
+        private System.Windows.Forms.Label lblTotalEnergyIncome;
+        private System.Windows.Forms.Label lblIncreaseIncoming;
     }
 }

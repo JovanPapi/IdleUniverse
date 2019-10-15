@@ -28,9 +28,6 @@ namespace IdleUniverse
             lblTotalEnergyIncome.RightToLeft = 0;
             lblAtomicEnergyCost.RightToLeft = 0;
 
-            lblAtomicEnergyCost.Left = 140;
-            lblTotalEnergyIncome.Left = 140;
-            lblIncreaseIncoming.Left = 140;
             lblMaterialName.Left = 60;
 
             lblAtomicEnergyCost.Font = new Font("Arial", 11);
@@ -39,14 +36,18 @@ namespace IdleUniverse
             lblMaterialName.Font = new Font("Arial", 9);
             lblMaterialName.TextAlign = ContentAlignment.MiddleCenter;
 
-            lblIncreaseIncoming.Text = ((int)material.IncreaseProducingEnergy).ToString() + "/s";
-            lblTotalEnergyIncome.Text = ((int)material.IncreaseProducingEnergy + material.CurrentProducingEnergy).ToString() + "/s";
-            lblAtomicEnergyCost.Text = material.HowCost.ToString() + "/s";
+            lblIncreaseIncoming.Text = string.Format("{0:#,0}",(material.IncreaseProducingEnergy)) + "/s";
+            lblTotalEnergyIncome.Text = string.Format("{0:#,0}", ((long)material.IncreaseProducingEnergy + material.CurrentProducingEnergy)) + "/s";
+            lblAtomicEnergyCost.Text = string.Format("{0:#,0}", material.HowCost) + "/s";
             lblMaterialName.Text = material.Name + "\n   " + material.BoughtTimes;
             lblMaterialName.BackColor = Color.Transparent;
             lblMaterialName.ForeColor = Color.Red;
             ImagePanel.BackgroundImage = material.MaterialImage;
             ImagePanel.BackgroundImageLayout = ImageLayout.Center;
+
+            lblIncreaseIncoming.RightToLeft = RightToLeft.Inherit;
+            lblTotalEnergyIncome.RightToLeft = RightToLeft.Inherit;
+            lblAtomicEnergyCost.RightToLeft = RightToLeft.Inherit;
         }
         private void LblClose_MouseClick(object sender, MouseEventArgs e)
         {
@@ -72,9 +73,9 @@ namespace IdleUniverse
 
         public void UpdateLabels(BlockMaterials blockMaterial)
         {
-            lblIncreaseIncoming.Text = ((int)blockMaterial.IncreaseProducingEnergy).ToString() + "/s";
-            lblTotalEnergyIncome.Text = blockMaterial.TotalEnergy.ToString() + "/s";
-            lblAtomicEnergyCost.Text = blockMaterial.HowCost.ToString() + "/s";
+            lblIncreaseIncoming.Text = string.Format("{0:#,0}", ((int)blockMaterial.IncreaseProducingEnergy)) + "/s";
+            lblTotalEnergyIncome.Text = string.Format("{0:#,0}", blockMaterial.TotalEnergy) + "/s";
+            lblAtomicEnergyCost.Text = string.Format("{0:#,0}", blockMaterial.HowCost) + "/s";
             lblMaterialName.Text = material.Name + "\n" + material.BoughtTimes;
         }
     }

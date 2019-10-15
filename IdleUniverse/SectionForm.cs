@@ -23,7 +23,7 @@ namespace IdleUniverse
             InitializeComponent();
             SectionMaterials = list;
             multiplyNumber = 1;
-            lblAtomicEnergyNumber.Text = FirstTab.totalEnergyProduced.ToString();
+            lblAtomicEnergyNumber.Text = string.Format("{0:#,0}", FirstTab.totalEnergyProduced);
             timerForEnergyProduce.Start();
             AuxilaryObject = null;
             pbAtomicEnergyPictureNumber.Image = Resources.AtomicImageForBeauty;
@@ -39,10 +39,11 @@ namespace IdleUniverse
                 FillNanoImages();
                 this.AutoScroll = true;
             }
-            /*if (Type.Equals(TypeOfSection.Nano)){
+            if (Type.ToString() == TypeOfSection.Complex.ToString()){
                 FillComplexImages();
+                this.AutoScroll = true;
             }
-            if (Type.Equals(TypeOfSection.Nano)) {
+            /*if (Type.Equals(TypeOfSection.Nano)) {
                 FillBioImages();
             }*/
             FillLabelNames();
@@ -143,6 +144,61 @@ namespace IdleUniverse
             Panel11.Name = SectionMaterials.ElementAt(10).Name;
             Panel12.Name = SectionMaterials.ElementAt(11).Name;
         }
+        private void FillComplexImages()
+        {
+            AuxilaryObject = new BlockMaterials().FindMaterial("Water", SectionMaterials);
+            Panel1.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel1.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Salt", SectionMaterials);
+            Panel2.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel2.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Sand", SectionMaterials);
+            Panel3.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel3.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Lipid", SectionMaterials);
+            Panel4.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel4.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Carbohydrate", SectionMaterials);
+            Panel5.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel5.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Hemoglobin", SectionMaterials);
+            Panel6.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel6.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Dna", SectionMaterials);
+            Panel7.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel7.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Protein", SectionMaterials);
+            Panel8.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel8.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Chromosome", SectionMaterials);
+            Panel9.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel9.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Cell", SectionMaterials);
+            Panel10.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel10.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Neuron", SectionMaterials);
+            Panel11.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel11.BackgroundImageLayout = ImageLayout.Center;
+
+            AuxilaryObject = new BlockMaterials().FindMaterial("Microorganism", SectionMaterials);
+            Panel12.BackgroundImage = AuxilaryObject.MaterialImage;
+            Panel12.BackgroundImageLayout = ImageLayout.Center;
+
+            Panel10.Name = SectionMaterials.ElementAt(9).Name;
+            Panel11.Name = SectionMaterials.ElementAt(10).Name;
+            Panel12.Name = SectionMaterials.ElementAt(11).Name;
+
+        }
         private void FillLabelNames()
         {
             lbl1.Text = SectionMaterials.ElementAt(0).Name;
@@ -190,25 +246,25 @@ namespace IdleUniverse
         private void UpdateEnergyShowingLabels()
         {
             int i = 0;
-            lbl1.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-            lbl2.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-            lbl3.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-            lbl4.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-            lbl5.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-            lbl6.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-            lbl7.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-            lbl8.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-            lbl9.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-            if(SectionMaterials.Count >= 10)
+            lbl1.Text = string.Format("{0:#,0}",SectionMaterials.ElementAt(i++).CurrentProducingEnergy) + "/s";
+            lbl2.Text = string.Format("{0:#,0}", SectionMaterials.ElementAt(i++).CurrentProducingEnergy) + "/s";
+            lbl3.Text = string.Format("{0:#,0}", SectionMaterials.ElementAt(i++).CurrentProducingEnergy) + "/s";
+            lbl4.Text = string.Format("{0:#,0}", SectionMaterials.ElementAt(i++).CurrentProducingEnergy) + "/s";
+            lbl5.Text = string.Format("{0:#,0}", SectionMaterials.ElementAt(i++).CurrentProducingEnergy) + "/s";
+            lbl6.Text = string.Format("{0:#,0}", SectionMaterials.ElementAt(i++).CurrentProducingEnergy) + "/s";
+            lbl7.Text = string.Format("{0:#,0}", SectionMaterials.ElementAt(i++).CurrentProducingEnergy) + "/s";
+            lbl8.Text = string.Format("{0:#,0}", SectionMaterials.ElementAt(i++).CurrentProducingEnergy) + "/s";
+            lbl9.Text = string.Format("{0:#,0}", SectionMaterials.ElementAt(i++).CurrentProducingEnergy) + "/s";
+            if (SectionMaterials.Count >= 10)
             {
-                lbl10.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-                lbl11.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
-                lbl12.Text = SectionMaterials.ElementAt(i++).CurrentProducingEnergy.ToString() + "/s";
+                lbl10.Text = string.Format("{0:#,0}", SectionMaterials.ElementAt(i++).CurrentProducingEnergy) + "/s";
+                lbl11.Text = string.Format("{0:#,0}", SectionMaterials.ElementAt(i++).CurrentProducingEnergy) + "/s";
+                lbl12.Text = string.Format("{0:#,0}", SectionMaterials.ElementAt(i++).CurrentProducingEnergy) + "/s";
             }
         }
         private void TimerForEnergyProduce_Tick(object sender, EventArgs e)
         {
-            lblAtomicEnergyNumber.Text = FirstTab.totalEnergyProduced.ToString();
+            lblAtomicEnergyNumber.Text = string.Format("{0:#,0}",FirstTab.totalEnergyProduced);
         }
 
         private void PbGoBackToFirstTab_MouseClick(object sender, MouseEventArgs e)

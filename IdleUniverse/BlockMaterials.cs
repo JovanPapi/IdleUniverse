@@ -13,10 +13,10 @@ namespace IdleUniverse
         public int HelperID { get; set; }
         public string Name { get; set; }
         public int BoughtTimes { get; set; }
-        public int CurrentProducingEnergy { get; set; }
+        public long CurrentProducingEnergy { get; set; }
         public long HowCost { get; set; }
-        public double IncreaseProducingEnergy { get; set; }
-        public int TotalEnergy { get; set; }
+        public long IncreaseProducingEnergy { get; set; }
+        public long TotalEnergy { get; set; }
         public Image MaterialImage { get; set; }
         public int TotalNumberUpgrade { get; set; }
         public int CheckForDoubleIncome { get; set; }
@@ -63,19 +63,19 @@ namespace IdleUniverse
             {
                 BoughtTimes++;
                 double temp = HowCost + (HowCost / 10);
-                HowCost = (int)Math.Round(temp);
+                HowCost = (long)Math.Round(temp);
                 if (BoughtTimes == CheckForDoubleIncome - 1)
                 {
                     CheckForDoubleIncome += 25;
-                    IncreaseProducingEnergy *= 25.92;
+                    IncreaseProducingEnergy *= (long)25.92;
                 }
                 else if (BoughtTimes == (CheckForDoubleIncome - 25))
                 {
-                    IncreaseProducingEnergy = IncreaseProducingEnergy / 25.92;
+                    IncreaseProducingEnergy = (long)(IncreaseProducingEnergy / 25.92);
                     IncreaseProducingEnergy *= 2;
                 }
-                CurrentProducingEnergy += (int)IncreaseProducingEnergy;
-                TotalEnergy = (int)(CurrentProducingEnergy + IncreaseProducingEnergy);
+                CurrentProducingEnergy += IncreaseProducingEnergy;
+                TotalEnergy = (CurrentProducingEnergy + IncreaseProducingEnergy);
             }
             else if(multiplyNumber == 10)
             {
@@ -85,15 +85,15 @@ namespace IdleUniverse
                 if (BoughtTimes == CheckForDoubleIncome - 1)
                 {
                     CheckForDoubleIncome += 25;
-                    IncreaseProducingEnergy *= 1.69;
+                    IncreaseProducingEnergy *= (long)1.69;
                 }
                 else if (BoughtTimes == (CheckForDoubleIncome - 25))
                 {
-                    IncreaseProducingEnergy = IncreaseProducingEnergy / 1.69;
+                    IncreaseProducingEnergy = (long)(IncreaseProducingEnergy / 1.69);
                     IncreaseProducingEnergy *= 2;
                 }
-                CurrentProducingEnergy += (int)IncreaseProducingEnergy;
-                TotalEnergy = (int)(CurrentProducingEnergy + IncreaseProducingEnergy);
+                CurrentProducingEnergy += IncreaseProducingEnergy;
+                TotalEnergy = (CurrentProducingEnergy + IncreaseProducingEnergy);
             }
             /*else if(multiplyNumber == 100)
             {
@@ -106,7 +106,7 @@ namespace IdleUniverse
                 }
             }*/
         }
-        public bool CheckBeforeBuy(int totalProducedEnergy)
+        public bool CheckBeforeBuy(long totalProducedEnergy)
         {
             return totalProducedEnergy > this.HowCost;
         }

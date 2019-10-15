@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>IdleUniverse.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -170,6 +173,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="QuantiumImages\NanoSectionImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Lipid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Microorganism.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Neuron.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Protein.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Salt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Sand.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Water.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Carbohyddrate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Cell.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Chromosome.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Dna.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\Hemoglobin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuantiumImages\ComplexPanelImage.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

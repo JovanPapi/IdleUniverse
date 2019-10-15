@@ -34,9 +34,8 @@ namespace IdleUniverse
         private Label label2;   
         private Label label3;
         private Label label4;
-        public static int totalEnergyProduced;
+        public static long totalEnergyProduced;
         private SectionForm sectionForm;
-        private FirstTab firstTab;
         public enum TypeOfSection { Quantum,Nano,Complex,Bio};
         public FirstTab()
         {
@@ -80,7 +79,7 @@ namespace IdleUniverse
                 else
                 {
                     QuantumMaterials[i].HowCost = QuantumMaterials[i - 1].HowCost * 3;
-                    QuantumMaterials[i].IncreaseProducingEnergy = QuantumMaterials[i - 1].IncreaseProducingEnergy * 2.81;
+                    QuantumMaterials[i].IncreaseProducingEnergy = (long)(QuantumMaterials[i - 1].IncreaseProducingEnergy * 2.81);
                 }
             }
             QuantumPanel.BackgroundImage = Resources.QuantumPanel;
@@ -123,7 +122,7 @@ namespace IdleUniverse
                 else
                 {
                     NanoMaterials[i].HowCost = NanoMaterials[i - 1].HowCost * 3;
-                    NanoMaterials[i].IncreaseProducingEnergy = NanoMaterials[i - 1].IncreaseProducingEnergy * 2.58;
+                    NanoMaterials[i].IncreaseProducingEnergy = (long)(NanoMaterials[i - 1].IncreaseProducingEnergy * 2.58);
                 }
             }
             NanoPanel.BackgroundImage = Resources.NanoSectionImage;
@@ -132,29 +131,33 @@ namespace IdleUniverse
         public void fillComplexList()
         {
             ComplexMaterials.Add(new BlockMaterials(name: "Water", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Water));
             ComplexMaterials.Add(new BlockMaterials(name: "Salt", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Salt));
             ComplexMaterials.Add(new BlockMaterials(name: "Sand", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Sand));
             ComplexMaterials.Add(new BlockMaterials(name: "Lipid", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Lipid));
             ComplexMaterials.Add(new BlockMaterials(name: "Carbohydrate", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Carbohyddrate));
             ComplexMaterials.Add(new BlockMaterials(name: "Hemoglobin", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Hemoglobin));
             ComplexMaterials.Add(new BlockMaterials(name: "Dna", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Dna));
             ComplexMaterials.Add(new BlockMaterials(name: "Protein", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Protein));
             ComplexMaterials.Add(new BlockMaterials(name: "Chromosome", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Chromosome));
             ComplexMaterials.Add(new BlockMaterials(name: "Cell", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Cell));
             ComplexMaterials.Add(new BlockMaterials(name: "Neuron", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Neuron));
             ComplexMaterials.Add(new BlockMaterials(name: "Microorganism", boughtTimes: 0,
-                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: null));
+                incomingEnergy: 0, howCost: 0, increaseIncomingEnergy: 0, totalEnergy: 0, materialImage: Resources.Microorganism));
+
+            ComplexPanel.BackgroundImage = Resources.ComplexPanelImage;
+            ComplexPanel.BackgroundImageLayout = ImageLayout.Center;
+
             for (int i = 0; i < ComplexMaterials.Count; i++)
             {
                 ComplexMaterials[i].HelperID = i;
@@ -166,7 +169,7 @@ namespace IdleUniverse
                 else
                 {
                     ComplexMaterials[i].HowCost = ComplexMaterials[i - 1].HowCost * 3;
-                    ComplexMaterials[i].IncreaseProducingEnergy = ComplexMaterials[i - 1].IncreaseProducingEnergy * 2.74;
+                    ComplexMaterials[i].IncreaseProducingEnergy = (long)(ComplexMaterials[i - 1].IncreaseProducingEnergy * 2.74);
                 }
             }
 
@@ -215,7 +218,7 @@ namespace IdleUniverse
                 else
                 {
                     BioMaterials[i].HowCost = BioMaterials[i - 1].HowCost * 3;
-                    BioMaterials[i].IncreaseProducingEnergy = BioMaterials[i - 1].IncreaseProducingEnergy * 2.81;
+                    BioMaterials[i].IncreaseProducingEnergy = (long)(BioMaterials[i - 1].IncreaseProducingEnergy * 2.81);
                 }
 
 
@@ -227,7 +230,7 @@ namespace IdleUniverse
         {
             foreach (var item in QuantumMaterials)
                 totalEnergyProduced += item.CurrentProducingEnergy;
-            lblTotalAtomicEnergy.Text = totalEnergyProduced.ToString();
+            lblTotalAtomicEnergy.Text = string.Format("{0:#,0}",totalEnergyProduced);
         }
 
         private void InitializeComponent()
@@ -448,10 +451,10 @@ namespace IdleUniverse
         private void ClickedSectionPanel(object sender, MouseEventArgs e)
         {
             var panel = sender as Panel;
-            firstTab = new FirstTab();
             if (e.Button == MouseButtons.Left)
             {
-                if(panel != null)
+                this.Hide();
+                if (panel != null)
                 {
                     if (panel.Name.Equals(QuantumPanel.Name))
                         sectionForm = new SectionForm(QuantumMaterials, TypeOfSection.Quantum);
@@ -461,13 +464,13 @@ namespace IdleUniverse
                         sectionForm = new SectionForm(ComplexMaterials, TypeOfSection.Complex);
                     if (panel.Name.Equals(BioPanel.Name))
                         sectionForm = new SectionForm(BioMaterials, TypeOfSection.Bio);
-                    
-                    firstTab.Opacity = 0;
+
+
                     if (sectionForm.ShowDialog() == DialogResult.OK)
                         sectionForm.Close();
                     else
                         sectionForm.Close();
-                    firstTab.Opacity = 100;
+                    this.Show();
                 }
             }
         }
